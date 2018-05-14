@@ -1,0 +1,11 @@
+filebeat:
+  prospectors:
+    -
+      paths:
+        - /var/log/kubetail.log
+      input_type: log
+ 
+output:
+  logstash:
+    hosts: [ "#LOGSTASH_HOST#" ]
+    

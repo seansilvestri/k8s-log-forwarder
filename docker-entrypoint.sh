@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sed -i "s/#LOGSTASH_HOST#/${LOGSTASH_HOST}/g" filebeat.yml
+sed -i "s/#LOGSTASH_ENDPOINT#/${LOGSTASH_ENDPOINT}/g" filebeat.yml
 
 filebeat -e -c filebeat.yml &
 
@@ -9,4 +9,3 @@ if [[ ! -z "$FILTER" ]]; then
 else
     ./kubetail $(echo \"$KUBE_TAIL_OPTIONS\" | tr -d '\"') >> /var/log/kubetail.log
 fi
-

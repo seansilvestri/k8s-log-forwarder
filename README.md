@@ -13,7 +13,7 @@ All the credit for kubetail belongs to johanheleby and the repo is located at: <
 2. Set environment variables. There are 3 environment variables that k8-log-forwarder utilizes.
   * KUBE\_TAIL\_OPTIONS: see [here](https://raw.githubusercontent.com/johanhaleby/kubetail/master/kubetail).
 One additional option has been added: 'no-line-prefix' (if included, then the pod/container name is not part of the log output)
-  * LOGSTASH_ENDPOINT: the logstash endpoint that filebeat sends logs to
+  * LOGSTASH_URI: the logstash endpoint that filebeat sends logs to
   * FILTER (optional): if included, uses the value as grep input in order to filter what gets logged
 
 ## Requirements

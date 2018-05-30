@@ -7,5 +7,5 @@ filebeat:
  
 output:
   logstash:
-    hosts: [ "#LOGSTASH_ENDPOINT#" ]
+    hosts: [ "#LOGSTASH_URI#" ]
     
